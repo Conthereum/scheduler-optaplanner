@@ -1,0 +1,39 @@
+{
+  "id" : 0,
+  "timeWeigh": 50,
+  "costWeigh": 50,
+  "computerList" : [ {
+    "id" : 0,
+    "costPerOperation": 10,
+    "costPerIdleTime": 1
+  }, {
+    "id" : 1,
+    "costPerOperation": 10,
+    "costPerIdleTime": 1
+  } ],
+  "processList" : [ {
+    "id" : 0,
+    "estimatedExecutionTime" : 10,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 1,
+    "estimatedExecutionTime" : 20,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 2,
+    "estimatedExecutionTime" : 5,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 3,
+    "estimatedExecutionTime" : 10,
+    "operationCount": 100,
+    "computer" : null
+  } ],
+
+  "conflictList": [],
+  "nonCommutativeList": [],
+  "score" : null
+}

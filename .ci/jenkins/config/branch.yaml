@@ -1,0 +1,100 @@
+generation_config:
+  missing_environments: ignore
+
+job_types:
+  setup_branch:
+    disabled: true
+  nightly:
+    disabled: false
+  other:
+    disabled: true
+  pullrequest:
+    disabled: false
+  release:
+    disabled: true
+  tools:
+    disabled: true
+
+environments:
+  native:
+    env_vars:
+      NATIVE: true
+      BUILD_MVN_OPTS_CURRENT: -Dnative -Dquarkus.native.container-build=true
+      ADDITIONAL_TIMEOUT: 720
+    ids:
+    - native
+  quarkus-main:
+    enabled: false
+    env_vars:
+      QUARKUS_BRANCH: main
+    ids:
+    - quarkus
+  quarkus-branch:
+    env_vars:
+      QUARKUS_BRANCH: '2.16'
+    ids:
+    - quarkus
+  ecosystem:
+    auto_generation: false
+    ids:
+    - ecosystem
+productized_branch: true
+disable:
+  triggers: false
+  deploy: true
+repositories:
+- name: optaplanner
+  branch: main
+- name: optaplanner-quickstarts
+  branch: 8.x
+- name: optaplanner-website
+  branch: main
+- name: kie-benchmarks
+  branch: main
+productized_repositories:
+- name: optaplanner
+- name: optaplanner-quickstarts
+- name: optaplanner-website
+git:
+  author:
+    name: kiegroup
+    credentials_id: kie-ci5
+    token_credentials_id: kie-ci5-token
+  fork_author:
+    name: kie-ci
+    credentials_id: kie-ci
+  quarkus:
+    author:
+      name: quarkusio
+      credentials_id: kie-ci
+    branch: main
+  jenkins_config_path: .ci/jenkins
+buildchain_config:
+  git:
+    repository: optaplanner
+    file_path: .ci/buildchain-config.yaml
+maven:
+  settings_file_id: kogito_release_settings
+  nexus:
+    release_url: https://repository.jboss.org/nexus
+    release_repository: jboss-releases-repository
+    staging_profile_url: https://repository.jboss.org/nexus/content/groups/kogito-public/
+    staging_profile_id: 2161b7b8da0080
+    build_promotion_profile_id: ea49ccd6f174
+  artifacts_repository: ''
+  pr_checks:
+    repository:
+      url: https://bxms-qe.rhev-ci-vms.eng.rdu2.redhat.com:8443/nexus/content/repositories/kogito-runtimes-pr-full-testing/
+      creds_id: unpacks-zip-on-qa-nexus
+cloud:
+  image:
+    registry_credentials: optaplanner-quay-token
+    registry: quay.io
+    namespace: optaplanner
+    latest_git_branch: main
+jenkins:
+  email_creds_id: OPTAPLANNER_CI_EMAIL
+  default_tools:
+    jdk: kie-jdk17
+    maven: kie-maven-3.9.3
+    sonar_jdk: kie-jdk17

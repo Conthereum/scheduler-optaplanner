@@ -1,0 +1,145 @@
+{
+  "id" : 0,
+  "timeWeigh": 50,
+  "costWeigh": 50,
+  "computerList" : [ {
+    "id" : 0,
+    "costPerOperation": 10,
+    "costPerIdleTime": 1
+  }, {
+    "id" : 1,
+    "costPerOperation": 10,
+    "costPerIdleTime": 1
+  }, {
+    "id" : 2,
+    "costPerOperation": 10,
+    "costPerIdleTime": 1
+  }, {
+    "id" : 3,
+    "costPerOperation": 10,
+    "costPerIdleTime": 1
+  }, {
+    "id" : 4,
+    "costPerOperation": 10,
+    "costPerIdleTime": 1
+  } ],
+  "processList" : [ {
+    "id" : 0,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 1,
+    "estimatedExecutionTime" : 4,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 2,
+    "estimatedExecutionTime" : 5,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 3,
+    "estimatedExecutionTime" : 1,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 4,
+    "estimatedExecutionTime" : 1,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 5,
+    "estimatedExecutionTime" : 1,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 6,
+    "estimatedExecutionTime" : 3,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 7,
+    "estimatedExecutionTime" : 1,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 8,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 9,
+    "estimatedExecutionTime" : 6,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 10,
+    "estimatedExecutionTime" : 9,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 11,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 12,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 13,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 14,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 15,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 16,
+    "estimatedExecutionTime" : 1,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 17,
+    "estimatedExecutionTime" : 1,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 18,
+    "estimatedExecutionTime" : 5,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 19,
+    "estimatedExecutionTime" : 6,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 20,
+    "estimatedExecutionTime" : 1,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 21,
+    "estimatedExecutionTime" : 2,
+    "operationCount": 100,
+    "computer" : null
+  }, {
+    "id" : 22,
+    "estimatedExecutionTime" : 4,
+    "operationCount": 100,
+    "computer" : null
+  } ],
+  "conflictList": [],
+  "nonCommutativeList": [],
+  "score" : null
+}

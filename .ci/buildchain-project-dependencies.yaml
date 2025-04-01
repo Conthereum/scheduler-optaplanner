@@ -1,0 +1,19 @@
+version: "2.1"
+dependencies:
+  - project: kiegroup/optaplanner
+  - project: kiegroup/optaplanner-quickstarts
+    dependencies:
+      - project: kiegroup/optaplanner
+    mapping:
+      dependencies:
+        default:
+          - source: development
+            target: main # should migrate to 9 before the build
+          - source: 8.x # does not migrate
+            target: main
+      dependant:
+        default:
+          - source: 9.x
+            target: development
+          - source: main # should migrate to 9 before the build
+            target: development
